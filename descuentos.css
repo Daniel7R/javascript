@@ -1,0 +1,49 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    margin: 0;
+}
+
+section{
+    padding: 20px;
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+.form-group{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+
+}
+.form-control input{
+    border: none;
+    background-color: lightgrey;
+    padding: 5px 0 5px 0;
+    border-radius: 7px;
+}
+
+.btn-Calcular{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: skyblue;
+    padding: 20px 0 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.btn-Calcular:hover{
+    background-color:lightgreen;
+    
+}
