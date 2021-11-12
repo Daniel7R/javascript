@@ -53,3 +53,4 @@ function esPar(numerito) {
     medianaGeneralCol,
     medianaTop10Col
     );
+    

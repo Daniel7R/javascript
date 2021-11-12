@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidas de Tendencia Central</title>
+    <link rel="shortcut icon" href="./iconos/tendencia-central.png">
+    <link rel="stylesheet" href="medidasTendenciaCentral.css">
+</head>
+<body>
+    <header>
+        <h1>Promedio, Mediana y Moda</h1>
+        <p>¡Halla el promedio, la mediana y la moda de un conjunto de datos!</p>
+    </header>
+    <section>
+        <h2>Primero ingresa los datos que serán procesados</h2>
+        <form class="form-group" id="formita" action="#">
+            <div>
+                <label for="dato">Ingresa el dato: </label>
+                <input type="number" id="dato">
+            </div>
+            <button type="button" onkeypress="procesarDatos()" id="add" class="btn" onclick="procesarDatos()">Agregar</button>
+            <button type="button" id="delete" class="btn" onclick="vaciarDatos()">Vaciar Datos</button>
+            <div style="max-width: 500px;">
+                <p id="listaDatos">&nbsp;</p>
+            </div>
+            <p id="alert1">&nbsp;</p>
+        </form>
+        <h3>Seleccione el procedimiento que desea realizar: </h3>
+        <div class="procedimientos">
+            <button class="btn" onclick="promedio()">Promedio</button>
+            <button class="btn" onclick="mediana()">Mediana</button>
+            <button class="btn" onclick="moda()">Moda</button>
+            <p id="resultado"></p>
+        </div>
+    </section>
+    <script src="./medidasTendenciaCentral.js"></script>
+</body>
+</html>

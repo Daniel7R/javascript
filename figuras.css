@@ -10,12 +10,13 @@ header{
 header h1 {
     color: slategray;
 }
-
+ 
 section{
     display: flex;
-    width: 600px;
+    width: 700px;
     flex-wrap: wrap;
     column-gap: 20px;
+    object-fit: contain;
 }
 .btn{
     width: 90%;
@@ -29,6 +30,7 @@ section{
     
     background-color: lightgreen;
     transition: background-color 1000ms;
+    border: 1px solid limegreen;
 }
 .btn-perimetro:hover{
     background-color:transparent;
@@ -39,6 +41,7 @@ section{
 .btn-area{
     background-color: lightskyblue;
     transition: background-color 1000ms;
+    border: 1px solid lightskyblue;
 }
 .btn-area:hover{
     background-color: transparent;
@@ -49,6 +52,7 @@ section{
 .figura{
     align-items: center;
     text-align: center;
+    margin: 0 auto;
 }
 
 .figura input{
@@ -67,4 +71,26 @@ section{
 #circulo img{
     width: 66px;
 }
+.input{
+    border: none;
+    border-radius: 8px;
+    background-color:lightsteelblue;
+    border: 1px solid lightsteelblue;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 
+input[type=number]:focus{
+    color:darkslategray;
+    border: 1px solid lightsteelblue;
+}
+
+@media (max-width:830px) {
+    section{
+        display: inline-block;
+        width:90%;
+    }
+}

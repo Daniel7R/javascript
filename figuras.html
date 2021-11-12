@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso Javascript</title>
+    <title>Figuras Geométricas</title>
+    <link rel="shortcut icon" href="./iconos/Figuras-index.png">
     <link rel="stylesheet" href="figuras.css">
 </head>
 <body>
     <header>
         <h1>Figuras Geométricas</h1>
-        <p>Práctica</p>
+        <p>¡halla el area y perimetro de cualquiera de las siguientes figuras!</p>
     </header>
     <section>
         <div class="figura" id="circulo">
             <img src="./iconos/icono-circulo.png" class="icon" alt="circulo">
             <h2>Calcula el area y perimetro de un circulo</h2>
             <form>
-                <label for="lado1">Digite el radio: </label>
-                <input type="number" id="radio">
+                <label for="radio">Digite el radio: </label>
+                <input type="number" id="radio" class="input">
 
                 <button type="button" onclick="calcularPerimetroCirculo()" class="btn btn-perimetro">Perimetro</button>
                 <button type="button" onclick="calcularAreaCirculo()" class="btn btn-area">Area</button>
@@ -30,7 +31,7 @@
             <h2>Calcula el area y perimetro de un cuadrado</h2>
             <form>
                 <label for="ladoC">Digite el lado: </label>
-                <input type="number" id="ladoC" >
+                <input type="number" id="ladoC"  class="input">
 
                 <button type="button" onclick="calcularPerimetroCuadrado()" class="btn btn-perimetro">
                     Perimetro
@@ -45,18 +46,23 @@
             <img src="./iconos/icono-triangulo.png" class="icon" alt="circulo">
             <h2>Calcula el area y perimetro de un triangulo</h2>
             <form>
-                <label for="lado1">Digite el lado 1: </label>
-                <input type="number" id="lado1">
-
-                <label for="lado2">Digite el lado 2: </label>
-                <input type="number" id="lado2">
-
-                <label for="lado3">Digite el lado 3: </label>
-                <input type="number" id="lado3">
-
-                <label for="altura">Digite la  altura: </label>
-                <input type="number" id="altura">
-
+                <div>
+                    <label for="lado1">Digite el lado 1: </label>
+                    <input type="number" id="lado1" class="input">
+                </div>
+                <div>
+                    <label for="lado2">Digite el lado 2: </label>
+                    <input type="number" id="lado2" class="input">
+                </div>
+                <div>
+                    <label for="lado3">Digite el lado 3: </label>
+                    <input type="number" id="lado3" class="input">
+                </div>
+                <div>
+                    <label for="altura">Digite la  altura: </label>
+                    <input type="number" id="altura" class="input">
+                </div>
+                
                 <button type="button" onclick="calcularPerimetroTriangulo()" class="btn btn-perimetro">Perimetro</button>
                 <button type="button" onclick="calcularAreaTriangulo()" class="btn btn-area">Area</button>
                 <p id="resultadoT">&nbsp;</p>

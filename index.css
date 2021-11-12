@@ -1,0 +1,147 @@
+*:root{
+    --font: Arial, Helvetica, sans-serif;
+}
+header{
+    text-align: center;
+}
+
+h1{
+    font-size: 44px;
+    font-family: var(--font);
+}
+
+ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    place-items: center;
+}
+a{
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 40px;
+}
+
+li{
+    width: 90%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 70px;
+}
+#figuras{
+    background-color:springgreen;
+    opacity: 1;
+    transition: opacity 1s;
+    background-image: url("./iconos/Figuras-index.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode: exclusion;
+}
+
+#figuras a{
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#figuras:hover{
+    opacity: 0.7;
+    transition: opacity 1s;
+}
+
+#Descuentos{
+    background-color: royalblue;
+    opacity: 1;
+    transition: opacity 1s;
+    background-image: url("./iconos/promedios-descuentos.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode: color;
+    align-items: center;
+}
+#Descuentos:hover{
+    opacity: 0.7;
+    transition: opacity 1s;
+}
+
+#Descuentos a{
+    color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tendenciaCentral{
+    background-color: springgreen;
+    opacity: 1;
+    transition: opacity 1s;
+    background-image: url("./iconos/tendencia-central.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode: color;
+}
+#tendenciaCentral:hover{
+    opacity:0.7 ;
+    transition: opacity 1s;
+}
+
+#tendenciaCentral a{
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#salarios{
+    background-image: url("./iconos/salario.png");
+    background-color: royalblue;
+    opacity: 1;
+    transition: opacity 1s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-blend-mode: saturation;
+}
+#salarios:hover{
+    opacity: 0.7;
+    transition: opacity 1s;
+}
+
+#salarios a{
+    color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width:830px) {
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+    li{
+        margin-bottom: 20px;
+        height: 490px;
+    }
+    li a{
+        font-size: 30px;
+    }
+}
