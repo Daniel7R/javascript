@@ -4,9 +4,30 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Salarios</title>
+   <link rel="stylesheet" href="salarios.css">
 </head>
 <body>
+   <header>
+      <h2>Análisis Salarial</h2>
+      <p>Esta diseñado para analizar cual sería la mediana respecto a un grupo de usuarios de acuerdo a su salario</p>
+   </header>
+   <section class="container">
+         <form>
+            <div>
+               <label for="entradaSalario">Digite el salario: </label>
+               <input type="number" name="entradaSalario" id="salario">
+            </div>
+            <button type="button" class="btn" id="add" onclick="agregarSalario()">Agregar</button>
+         </form>
+         <div>
+            <p id="alert"></p>
+            <p id="listaSalarios"></p>
+         </div>
+         <div>
+            <button class="btn" id="calcular" id="determinar" onclick="determinarMediana()">Determinar Mediana</button>
+            <p id="resultado"></p>
+         </div>
+   </section>
    <script src="./salarios.js"></script>
-   <script src="./analisis.js"></script>
 </body>
 </html>

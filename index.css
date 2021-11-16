@@ -14,8 +14,9 @@ ul{
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 100vh;
+    height: 80vh;
     place-items: center;
+    padding: 0;
 }
 a{
     text-decoration: none;
@@ -136,6 +137,7 @@ li{
     ul{
         display: flex;
         flex-direction: column;
+        padding: 0;
     }
     li{
         margin-bottom: 20px;

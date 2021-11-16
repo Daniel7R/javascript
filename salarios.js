@@ -1,52 +1,83 @@
-const colombia = []
+const salarios = [];
 
-colombia.push({
-    name: "Geraldine",
-    salary: 1000000
-});
+function agregarSalario(){
+    const inputSalario = document.getElementById("salario");
+    const salario = inputSalario.value;
 
-colombia.push({
-    name: "Juan",
-    salary:100000
-})
+    const alert = document.getElementById("alert");
+
+    if(salario === ''){
+        alert.innerHTML = "<style>#badAlert{color:red;font-weight:bold;margin-top: 0px;margin-bottom: 0px;}</style><p id='badAlert'>Debe llenar el campo -.-</p>";
+    }else{
+    alert.innerHTML = "<style>#goodAlert{color:green;;margin-top: 0px;margin-bottom: 0px;}</style><p id='goodAlert'>Dato agregado correctamente</p>"
+    inputSalario.value = '';
+    
+    salarios.push(salario)
+    imprimirSalario()
+    }
+    inputSalario.focus();
+
+}
+
+function imprimirSalario(){
+    const p = document.getElementById("listaSalarios");
+    console.log(salarios.length);
+    
+    p.innerHTML = salarios;
+
+}
 
 
-colombia.push({
-    name: "Juliana",
-    salary:2000000
-})
+function esPar(numero){
+    return(numero%2 === 0);
+}
 
-colombia.push({
-    name: "Julian",
-    salary:3000000
-})
+function calcularMediaAritmetica(lista){
+    const sumaLista = lista.reduce(
+        function(valorAcumulado=0,siguienteValor){
+            return Number(valorAcumulado) + Number(siguienteValor);
+        }
+    );
 
-colombia.push({
-    name:"Miguel",
-    salary:4000000
-})
+    const promedio = sumaLista/lista.length;
+    return promedio;
+}
 
-colombia.push({
-    name: "Maria",
-    salary:500000
-})
+function calcularMediana(lista){
+    const mitad = parseInt(lista.length/2);
 
-colombia.push({
-    name: "Isabel",
-    salary:1000000
-})
+    if(esPar(lista.length)){
+        const personitaMitad1 = lista[mitad-1];
+        const personitaMitad2 = lista[mitad];
+    
+        const mediana =calcularMediaAritmetica([personitaMitad1,personitaMitad2]);
+        return mediana;
+    }else{
+        const personitaMitad = lista[mitad];
+        return personitaMitad;
+    }
+}
 
-colombia.push({
-    name: "Daniel",
-    salary:700000
-})
+function salariosOrdenados(lista){
+    const salariosSort = lista.sort(
+        function(salarioA, SalarioB){
+            return salarioA - SalarioB;
+        }
+    )
+    return salariosSort;
+}
 
-colombia.push({
-    name: "Roberto",
-    salary:400000
-})
+function determinarMediana(){
+    const result = document.getElementById("resultado");
 
-colombia.push({
-    name: "George",
-    salary:7000000
-})
+    const SalariosSorted = salariosOrdenados(salarios);
+    console.log(SalariosSorted);
+
+    if(salarios.length === 0){
+        result.innerHTML = "<style>#bAlert{color:red;font-weigth:bold;}</style><p id='bAlert'>No es posible determinar la mediana</p>";
+    }else{
+        result.innerText = '';
+        result.innerText = "La mediana salarial es: "+ calcularMediana(SalariosSorted);
+    }
+
+}

@@ -1,3 +1,7 @@
+*:root{
+    --fuente: Arial, Helvetica, sans-serif;
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button{
     -webkit-appearance: none;
@@ -16,15 +20,27 @@ section{
 }
 h1,h2,h3{
     text-align: center;
+    font-family: var(--fuente);
+}
+h1{
+    font-size: 36px;
 }
 p{
     text-align: center;
     padding: 0px;
     margin-top: 10px;
-    margin-bottom: 5px;;
+    margin-bottom: 5px;
+    font-family: var(--fuente);
 }
 .btn{
     width: 100%;
+    font-family: var(--fuente);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border: none;
 }
 form{
     display: flex;
@@ -32,21 +48,69 @@ form{
     text-align: center;
     padding-bottom: 40px;
     height: 30vh;
+    font-family: var(--fuente);
 }
+
+form input{
+    border: 1px solid lightskyblue;
+    border-radius: 8px;
+    background-color: lightskyblue;
+}
+
+form input:focus{
+    border: 1px solid lightskyblue;
+    border-radius: 8px;
+    background-color: white;
+}
+label{
+    font-family: var(--fuente);
+}
+
 form div{
     margin-bottom: 20px;
 }
 
-.btn{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+#add{
+    background-color:lightgreen ;
+    opacity: 1;
+    transition: opacity 1s;
 }
 
+#add:hover{
+    opacity: 0.8;
+    transition: opacity 1s;
+}
+
+#delete{
+    background-color:tomato;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#delete{
+    opacity: 0.8;
+    transition: opacity 1s;
+}
+
+.operaciones{
+    background-color:lightskyblue;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.operaciones:hover{
+    opacity: 0.8;
+    transition: opacity 1s;
+}
 
 @media (max-width:520px) {
     section{
         width: 90%;
+    }
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 20px;
     }
 }
