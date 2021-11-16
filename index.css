@@ -137,7 +137,7 @@ li{
     ul{
         display: flex;
         flex-direction: column;
-        padding: 0;
+        padding-inline-start: 0px;
     }
     li{
         margin-bottom: 20px;
