@@ -22,3 +22,6 @@
 -Segundo Paso: implemantar formulas
 -Tercer paso: crear funciones
 -Cuarto paso; integrar con html
+
+### Website deployed
+`https://daniel7r.github.io/javascript/`
